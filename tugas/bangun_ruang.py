@@ -1,33 +1,24 @@
 pi = 22/7
 
-#LUAS PERSEGI
-def luas_persegi(sisi=0):
-    return (sisi*sisi)
+#lUAS kUBUS
+def luas_kubus(sisi) :
+    return sisi * 6
 
-#LUAS PERSEGI PANJANG
-def luas_persegi_panjang(panjang=0,lebar=0):
-    return (panjang*lebar)
+#lUAS BALOK
+def luas_balok(panjang, lebar, tinggi) :
+    return panjang*lebar*tinggi
 
-#LUAS SEGITIGA
-def luas_segitiga(alas=0,tinggi=0):
-    return (alas*tinggi/2)
+#LUAS KERUCUT
+def luas_kerucut(ruas, sisi_miring):
+    luas_alas = pi * ruas * ruas
+    luas_selimut = pi * ruas * sisi_miring
+    return luas_alas + luas_selimut
 
-#LUAS LINGKARAN
-def luas_lingkaran(ruas=0):
-    return (pi*(ruas**2))
+def luas_prisma_segitiga(alas, tinggi, tinggi_prisma):
+    luas_alas = alas * tinggi / 2
+    luas_selimut = luas_alas * tinggi_prisma
+    return 2 * luas_alas + luas_selimut
 
-#LUAS JAJARGENJANG
-def luas_jajargenjang(alas=0,tinggi=0):
-    return (alas*tinggi)
-
-#LUAS BELAH KETUPAT
-def luas_belahketupat(diagonal1=0,diagonal2=0):
-    return ((diagonal1*diagonal2)/2)
-
-#LUAS LAYANG-LAYANG
-def luas_layang_layang(diagonal1=0,diagonal2=0):
-    return ((diagonal1*diagonal2)/2)
-
-#LUAS TRAPESIUM
-def luas_trapesium(sisi_a=0,sisi_b=0,tinggi=0):
-    return (((sisi_a+sisi_b)*tinggi)/2)
+#lUAS TABUNG
+def luas_tabung(ruas, tinggi) :
+    return (2 * pi * ruas * ruas) + (2 * pi * ruas * tinggi)
