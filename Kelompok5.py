@@ -86,35 +86,45 @@ KELOMPOK 5
     elif opt == 2 :
         while True :
             print('''\nMENGHITUNG LUAS BANGUN RUANG
-1. Balok
-2. Kubus
+1. Kubus
+2. Balok
 3. Kerucut
-4. Prisma
-5. Limas
-6. Tabung
-7. Bola
+4. Prisma segitiga
+5. Tabung
+6. Bola
 0. Exit''')
             opt = int(input('\nPilih : '))
             if opt == 1 :
+                sisi = int(input('\nMasukan panjang sisi : '))
+                luas = luas_kubus(sisi)
+                print('Luas kubus adalah ',luas)
+
+            elif opt == 2:
                 panjang = int(input('\nMasukan panjang : '))
                 lebar = int(input('Masukan Lebar : '))
                 tinggi = int(input('Masukan tinggi : '))
                 luas = luas_balok(panjang,lebar,tinggi)
-                print('Luas Balok adalah ',luas)
-            elif opt == 2:
-                pass
+                print('Luas balok adalah ',luas)
+
             elif opt == 3:
-                pass
+                ruas = int(input("Masukkan jari-jari : "))
+                sisi_miring = int(input("Masukkan sisi miring : "))
+                luas = luas_kerucut(ruas, sisi_miring)
+                print('Luas kerucut adalah %0.2f '%luas)
+            
             elif opt == 4:
-                pass
+                alas = int(input('\nMasukan alas : '))
+                tinggi = int(input('\nMasukan tinggi alas : '))
+                tinggi_prisma = int(input('\nMasukan tinggi prisma : '))
+                luas = luas_prisma_segitiga(alas, tinggi, tinggi_prisma)
+                print('Luas prisma segitiga adalah ',luas)
+
             elif opt == 5:
-                pass
-            elif opt == 6:
-                pass
-            elif opt == 7:
-                pass
-            elif opt == 8:
-                pass
+                ruas = int(input('\nMasukan jari-jari : '))
+                tinggi = int(input('\nMasukan tinggi : '))
+                luas = luas_tabung(ruas, tinggi)
+                print('Luas tabung adalah %0.2f '%luas)
+            
             elif opt == 0:
                 exit = input('\nApakah anda ingin keluar? (y/n) :')
                 if exit == 'y':
