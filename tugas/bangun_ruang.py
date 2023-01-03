@@ -1,4 +1,4 @@
-pi=22/7
+pi = 22/7
 
 def luas_kubus(sisi=0):
     """
