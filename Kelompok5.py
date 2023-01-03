@@ -1,4 +1,3 @@
-
 from tugas import *
 
 while True :
@@ -30,7 +29,7 @@ KELOMPOK 5
             if opt == 1 :
                 sisi = int(input('\nMasukan panjang sisi : '))
                 luas = luas_persegi(sisi)
-                print('Luas persegi adalah  : ',luas)
+                print('Luas persegi adalah : ',luas)
 
             elif opt == 2 :
                 panjang = int(input('\nMasukan panjang : '))
@@ -38,14 +37,12 @@ KELOMPOK 5
                 luas = luas_persegi_panjang(panjang,lebar)
                 print('Luas persegi panjang adalah : ',luas)
                 
-
             elif opt == 3 :
                 tinggi = int(input('\nMasukan tinggi : '))
                 alas = int(input('Masukan alas   : '))
                 luas = luas_segitiga(tinggi,alas)
                 print('\nLuas segitiga adalah ',luas)
                 
-
             elif opt == 4 :
                 ruas = int(input('\nMasukan jari-jari lingkaran : '))
                 luas = luas_lingkaran(ruas)
@@ -77,11 +74,7 @@ KELOMPOK 5
                 print('Luas trapesium adalah : ',luas)
 
             elif opt == 0 :
-                exit = input('\nApakah anda ingin keluar? (y/n) :')
-                if exit == 'y' :
-                    print('Terima kasih telah menggunakan program ini'.upper())
-                    break
-                else : continue
+                break
 
     elif opt == 2 :
         while True :
@@ -92,6 +85,8 @@ KELOMPOK 5
 4. Prisma segitiga
 5. Tabung
 6. Bola
+7. Limas Segi Empat
+8. Limas Segi Tiga
 0. Exit''')
             opt = int(input('\nPilih : '))
             if opt == 1 :
@@ -107,38 +102,54 @@ KELOMPOK 5
                 print('Luas balok adalah ',luas)
 
             elif opt == 3:
-                ruas = int(input("Masukkan jari-jari : "))
+                ruas = int(input("\nMasukkan jari-jari : "))
                 sisi_miring = int(input("Masukkan sisi miring : "))
                 luas = luas_kerucut(ruas, sisi_miring)
                 print('Luas kerucut adalah %0.2f '%luas)
             
             elif opt == 4:
                 alas = int(input('\nMasukan alas : '))
-                tinggi = int(input('\nMasukan tinggi alas : '))
-                tinggi_prisma = int(input('\nMasukan tinggi prisma : '))
+                tinggi = int(input('Masukan tinggi alas : '))
+                tinggi_prisma = int(input('Masukan tinggi prisma : '))
                 luas = luas_prisma_segitiga(alas, tinggi, tinggi_prisma)
                 print('Luas prisma segitiga adalah ',luas)
 
             elif opt == 5:
                 ruas = int(input('\nMasukan jari-jari : '))
-                tinggi = int(input('\nMasukan tinggi : '))
+                tinggi = int(input('Masukan tinggi : '))
                 luas = luas_tabung(ruas, tinggi)
                 print('Luas tabung adalah %0.2f '%luas)
+
+            elif opt == 6:
+                ruas = int(input('\nMasukan ruas : '))
+                luas = luas_bola(ruas)
+                print('Luas bola adalah %0.2f'%luas)
             
-            elif opt == 0:
-                exit = input('\nApakah anda ingin keluar? (y/n) :')
-                if exit == 'y':
-                    print('Terima kasih telah menggunakan program ini'.upper())
-                    break
+            elif opt == 7:
+                luas_sisi_1 = int(input('\nMasukan Luas sisi 1 : '))
+                luas_sisi_2 = int(input('Masukan Luas sisi 2 : '))
+                luas_sisi_3 = int(input('Masukan Luas sisi 3 : '))
+                luas_sisi_4 = int(input('Masukan Luas sisi 4 : '))
+                luas = luas_limas_segitiga(luas_sisi_1,luas_sisi_2,luas_sisi_3,luas_sisi_4)
+                print('Luas limas segitiga adalah ',luas)
+
+            elif opt == 8:
+                luas_sisi_1 = int(input('\nMasukan Luas sisi 1 : '))
+                luas_sisi_2 = int(input('Masukan Luas sisi 2 : '))
+                luas_sisi_3 = int(input('Masukan Luas sisi 3 : '))
+                luas_sisi_4 = int(input('Masukan Luas sisi 4 : '))
+                luas_sisi_5 = int(input('Masukan Luas sisi 5 : '))
+                luas = luas_limas_segiempat(luas_sisi_1,luas_sisi_2,luas_sisi_3,luas_sisi_4,luas_sisi_5)
+                print('Luas limas segiempat adalah ',luas)
+                
+            elif opt == 0:    
+                 break
 
     elif opt == 0 :
         exit = input('\nApakah anda ingin keluar? (y/n) :')
         if exit == 'y' :
             print('Terima kasih telah menggunakan program ini'.upper())
             break
-        else : continue
     
     else :
         print('ERROR - MOHON MASUKAN NOMOR YANG TERDAPAT DI MENU')
-
-
