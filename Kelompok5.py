@@ -124,7 +124,7 @@ KELOMPOK 5
                 print('Luas tabung adalah %0.2f '%luas)
 
             elif opt == 6:
-                ruas = int(input('\nMasukan ruas : '))
+                ruas = int(input('\nMasukan jari-jari : '))
                 luas = luas_bola(ruas)
                 print('Luas bola adalah  %0.2f'%luas)
 
