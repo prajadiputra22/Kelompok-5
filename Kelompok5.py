@@ -124,25 +124,21 @@ KELOMPOK 5
                 print('Luas tabung adalah %0.2f '%luas)
 
             elif opt == 6:
-                ruas = int(input('\nMasukan jari-jari : '))
+                ruas = int(input('\nMasukan ruas : '))
                 luas = luas_bola(ruas)
                 print('Luas bola adalah  %0.2f'%luas)
 
             elif opt == 7:
-                luas_sisi_1 = int(input('\nMasukan Luas sisi 1 : '))
-                luas_sisi_2 = int(input('Masukan Luas sisi 2 : '))
-                luas_sisi_3 = int(input('Masukan Luas sisi 3 : '))
-                luas_sisi_4 = int(input('Masukan Luas sisi 4 : '))
-                luas = luas_limas_segitiga(luas_sisi_1,luas_sisi_2,luas_sisi_3,luas_sisi_4)
-                print('Luas limas segitiga adalah  ',luas)
+                alas = int(input('\nMasukan alas : '))
+                tinggi = int(input('Masukan tinggi : '))
+                luas = luas_limas_segitiga(alas,tinggi)
+                print('Luas limas segitiga adalah ',luas)
 
             elif opt == 8:
-                luas_sisi_1 = int(input('\nMasukan Luas sisi 1 : '))
-                luas_sisi_2 = int(input('Masukan Luas sisi 2 : '))
-                luas_sisi_3 = int(input('Masukan Luas sisi 3 : '))
-                luas_sisi_4 = int(input('Masukan Luas sisi 4 : '))
-                luas_sisi_5 = int(input('Masukan Luas sisi 5 : '))
-                luas = luas_limas_segiempat(luas_sisi_1,luas_sisi_2,luas_sisi_3,luas_sisi_4,luas_sisi_5)
+                luas_alas = int(input('\nMasukan Luas alas : '))
+                alas = int(input('Masukan alas segitiga : '))
+                tinggi = int(input('Masukan tinggi segitiga : '))
+                luas = luas_limas_segiempat(luas_alas,alas,tinggi)
                 print('Luas limas segiempat adalah ',luas)
             
             elif opt == 0:
